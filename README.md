@@ -1,1 +1,1 @@
-My first shell basics project
+This folder contains shell basics tasks
