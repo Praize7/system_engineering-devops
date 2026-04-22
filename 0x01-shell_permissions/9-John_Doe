@@ -1,2 +1,2 @@
 #!/bin/bash
-chown john:doe hello
+chmod 007 hello
