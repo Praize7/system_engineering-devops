@@ -1,13 +1,32 @@
 #!/usr/bin/env bash
-# This script displays the time for 24 hours in hh:mm format
-hour=0
-while [ $hour -le 23 ]
-do
-    minute=0
-    while [ $minute -le 59 ]
-    do
-        echo "$hour:$minute"
-        ((minute++))
-    done
-    ((hour++))
-done
+# This script checks if the file 'school' exists and displays its properties
+if [ -e "school" ]
+then
+    echo "school exists"
+    if [ -f "school" ]
+    then
+        echo "school is a regular file"
+    fi
+    if [ -d "school" ]
+    then
+        echo "school is a directory"
+    fi
+    if [ -s "school" ]
+    then
+        echo "school is not empty"
+    fi
+    if [ -r "school" ]
+    then
+        echo "school is readable"
+    fi
+    if [ -w "school" ]
+    then
+        echo "school is writable"
+    fi
+    if [ -x "school" ]
+    then
+        echo "school is executable"
+    fi
+else
+    echo "school does not exist"
+fi
