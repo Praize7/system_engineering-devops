@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# This script displays the time for 24 hours in hh:mm format
+hour=0
+while [ $hour -le 23 ]
+do
+    minute=0
+    while [ $minute -le 59 ]
+    do
+        echo "$hour:$minute"
+        ((minute++))
+    done
+    ((hour++))
+done
