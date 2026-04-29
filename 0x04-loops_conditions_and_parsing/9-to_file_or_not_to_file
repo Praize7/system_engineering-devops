@@ -1,30 +1,23 @@
 #!/usr/bin/env bash
 # This script checks if the file 'school' exists and displays its properties
-if [ -e "school" ]
-then
+if [ -e "school" ]; then
     echo "school exists"
-    if [ -f "school" ]
-    then
+    if [ -f "school" ]; then
         echo "school is a regular file"
     fi
-    if [ -d "school" ]
-    then
+    if [ -d "school" ]; then
         echo "school is a directory"
     fi
-    if [ -s "school" ]
-    then
+    if [ -s "school" ]; then
         echo "school is not empty"
     fi
-    if [ -r "school" ]
-    then
+    if [ -r "school" ]; then
         echo "school is readable"
     fi
-    if [ -w "school" ]
-    then
+    if [ -w "school" ]; then
         echo "school is writable"
     fi
-    if [ -x "school" ]
-    then
+    if [ -x "school" ]; then
         echo "school is executable"
     fi
 else
