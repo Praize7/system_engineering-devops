@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 # A Bash script that displays its PID and then waits in a loop
+# It prints "I am invincible!!!" when receiving a SIGTERM signal
+
+# Display the Process ID
 echo "$$"
+
+# The trap command catches the SIGTERM signal and runs the echo command
+trap 'echo "I am invincible!!!"' SIGTERM
+
 while true
 do
     echo "To infinity and beyond"
